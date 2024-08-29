@@ -5,8 +5,8 @@
 <div style="display: flex; justify-content: space-between;">
   <img src="img/1.PNG" marginTop="0" width="40%" height="40%"> 
   <img src="img/2.PNG" width="40%" height="40%"> 
-  <img src="img/3.PNG" width="40%" height="40%"> 
-  <img src="img/4.PNG" width="40%" height="40%"> 
+  <img src="img/3.jpg" width="40%" height="40%"> 
+  <img src="img/4.jpg" width="40%" height="40%"> 
 </div>
 
 ### 核心方法
