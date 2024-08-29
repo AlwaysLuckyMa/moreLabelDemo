@@ -3,10 +3,10 @@
 #### GIF 示例 (不挂 VPN 查看不了 GIF)
 
 <div style="display: flex; justify-content: space-between;">
-  <img src="gif/1.PNG" marginTop="0" width="40%" height="40%"> 
-  <img src="gif/2.PNG" width="40%" height="40%"> 
-  <img src="gif/3.PNG" width="40%" height="40%"> 
-  <img src="gif/4.PNG" width="40%" height="40%"> 
+  <img src="img/1.PNG" marginTop="0" width="40%" height="40%"> 
+  <img src="img/2.PNG" width="40%" height="40%"> 
+  <img src="img/3.PNG" width="40%" height="40%"> 
+  <img src="img/4.PNG" width="40%" height="40%"> 
 </div>
 
 ### 核心方法
