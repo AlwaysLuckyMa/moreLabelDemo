@@ -11,7 +11,7 @@ class MoreCell: UITableViewCell {
     var model: String = "" {
         didSet {
             titleL.text = model
-            Tools_TextMoreAndImgToCell(in: titleL, replace: "... 介绍更多", changeText: "介绍更多", changeColor: .green, image: UIImage(named: "jieshao"))
+            Tools_TextMoreAndImgToCell(in: titleL, replace: "... 介绍更多", changeText: "介绍更多", changeColor: .green, image: UIImage(named: "jieshao"), isShowImg: false)
         }
     }
 
