@@ -21,6 +21,7 @@ func Tools_TextMoreAndImgToCell(in label: UILabel,
                                 alignment: NSTextAlignment = .justified,
                                 replace replacementText: String = "... 查看更多",
                                 changeText: String = "查看更多",
+                                normalColor: UIColor = UIColor.black,
                                 changeColor: UIColor = UIColor.black,
                                 image: UIImage? = UIImage(systemName: "chevron.right"),
                                 isShowImg: Bool = true) {
@@ -32,7 +33,7 @@ func Tools_TextMoreAndImgToCell(in label: UILabel,
     let paragraphStyle = NSMutableParagraphStyle()
     paragraphStyle.alignment = alignment
     paragraphStyle.lineSpacing = 5.0
-    let fullAttributedText = NSMutableAttributedString(string: originalText, attributes: [.font: font, .paragraphStyle: paragraphStyle])
+    let fullAttributedText = NSMutableAttributedString(string: originalText, attributes: [.font: font, .foregroundColor: normalColor, .paragraphStyle: paragraphStyle])
 
     if numberLine == 0 {
         label.attributedText = fullAttributedText
@@ -66,7 +67,7 @@ func Tools_TextMoreAndImgToCell(in label: UILabel,
     while start < end {
         let mid = (start + end) / 2
         let substring = String(originalText.prefix(mid))
-        truncatedAttributedText = NSMutableAttributedString(string: substring + replacementText, attributes: [.font: font, .paragraphStyle: paragraphStyle])
+        truncatedAttributedText = NSMutableAttributedString(string: substring + replacementText, attributes: [.font: font, .foregroundColor: normalColor, .paragraphStyle: paragraphStyle])
         let range = (substring + replacementText).range(of: changeText)
         if let range = range {
             let nsRange = NSRange(range, in: substring + replacementText)
@@ -86,7 +87,7 @@ func Tools_TextMoreAndImgToCell(in label: UILabel,
         }
     }
     truncatedText = String(originalText.prefix(start - 1))
-    truncatedAttributedText = NSMutableAttributedString(string: truncatedText + replacementText, attributes: [.font: font, .paragraphStyle: paragraphStyle])
+    truncatedAttributedText = NSMutableAttributedString(string: truncatedText + replacementText, attributes: [.font: font, .foregroundColor: normalColor, .paragraphStyle: paragraphStyle])
     let range = (truncatedText + replacementText).range(of: changeText)
     if let range = range {
         let nsRange = NSRange(range, in: truncatedText + replacementText)
@@ -102,6 +103,7 @@ func Tools_TextMoreAndImgToCell(in label: UILabel,
 func Tools_TextMoreAndImgToView(in label: UILabel,
                                 alignment: NSTextAlignment = .justified,
                                 replace replacementText: String = "... 查看更多",
+                                normalColor: UIColor = UIColor.black,
                                 changeText: String = "查看更多",
                                 changeColor: UIColor = UIColor.black,
                                 image: UIImage? = UIImage(systemName: "chevron.right")) {
@@ -115,7 +117,7 @@ func Tools_TextMoreAndImgToView(in label: UILabel,
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = alignment
         paragraphStyle.lineSpacing = 5.0
-        let fullAttributedText = NSMutableAttributedString(string: originalText, attributes: [.font: font, .paragraphStyle: paragraphStyle])
+        let fullAttributedText = NSMutableAttributedString(string: originalText, attributes: [.font: font, .foregroundColor: normalColor, .paragraphStyle: paragraphStyle])
 
         let textRect = fullAttributedText.boundingRect(with: CGSize(width: labelWidth, height: CGFloat.greatestFiniteMagnitude), options: [.usesLineFragmentOrigin, .usesFontLeading], context: nil)
         let totalHeight = textRect.height
@@ -142,7 +144,7 @@ func Tools_TextMoreAndImgToView(in label: UILabel,
         while start < end {
             let mid = (start + end) / 2
             let substring = String(originalText.prefix(mid))
-            truncatedAttributedText = NSMutableAttributedString(string: substring + replacementText, attributes: [.font: font, .paragraphStyle: paragraphStyle])
+            truncatedAttributedText = NSMutableAttributedString(string: substring + replacementText, attributes: [.font: font, .foregroundColor: normalColor, .paragraphStyle: paragraphStyle])
             let range = (substring + replacementText).range(of: changeText)
             if let range = range {
                 let nsRange = NSRange(range, in: substring + replacementText)
@@ -160,7 +162,7 @@ func Tools_TextMoreAndImgToView(in label: UILabel,
             }
         }
         truncatedText = String(originalText.prefix(start - 1))
-        truncatedAttributedText = NSMutableAttributedString(string: truncatedText + replacementText, attributes: [.font: font, .paragraphStyle: paragraphStyle])
+        truncatedAttributedText = NSMutableAttributedString(string: truncatedText + replacementText, attributes: [.font: font, .foregroundColor: normalColor, .paragraphStyle: paragraphStyle])
         let range = (truncatedText + replacementText).range(of: changeText)
         if let range = range {
             let nsRange = NSRange(range, in: truncatedText + replacementText)
