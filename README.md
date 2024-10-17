@@ -64,9 +64,3 @@ Tools_TextMoreAndImg(in: titelL, replace: " ... 展开", changeText: "展开", c
         }
     }
 ```
-
-## 如有问题或疑问，请通过电子邮件联系我！
-
-##### If you have any questions or concerns, please contact me via email or QQ!
-
-E-mail：matsonga@163.com
